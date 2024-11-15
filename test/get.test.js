@@ -5,8 +5,11 @@ const test_input = { 'City': {'Street': {'House': {'Pets': ['cat', 'dog'] } } } 
 const test_path_1 = 'City.Street.House.Pets[1]'
 
 
-describe("Get valid", () => {
+describe("Get", () => {
   it("Get valid path", () =>{
-    expect( get(test_input,test_path_1) ).to.equal('dog')
+    expect( get(test_input, test_path_1) ).to.equal('dog')
+  });
+  it("Get invalid path", () =>{
+    expect( get(test_input, 'cat', 'spam') ).to.equal('spam')
   });
 })

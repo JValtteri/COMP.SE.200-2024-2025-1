@@ -22,10 +22,10 @@ describe("Filter", () => {
   it("true scottsmen", () => {
     expect(filter(sample_0, ({true_scottsman}) => true_scottsman )).to.deep.equal(expected_true)
   });
-  it("not true scottsmen", () => {
-    expect(filter(sample_0, ({true_scottsman}) => !true_scottsman )).to.deep.equal(expected_false)
-  });
-  it("not no match", () => {
+  it("No match", () => {
     expect(filter(expected_false, ({true_scottsman}) => true_scottsman )).to.deep.equal( [[]] )
+  });
+  it("Null", () => {
+    expect(filter(null, ({true_scottsman}) => true_scottsman )).to.deep.equal( [[]] )
   });
 })

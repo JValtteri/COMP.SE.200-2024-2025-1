@@ -9,6 +9,10 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "chai": "^5.1.2"
+  },
+  "devDependencies": {
+    "chai": "*"
+  }
 }

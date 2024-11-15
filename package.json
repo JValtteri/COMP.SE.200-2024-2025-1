@@ -24,7 +24,16 @@
   "nyc": {
     "all": true,
     "include": [
-        "src/eq.js"
+        "src/eq.js",
+        "src/add.js",
+        "src/get.js",
+        "src/toInteger.js",
+        "src/filter.js",
+        "src/map.js",
+        "src/isEmpty.js",
+        "src/upperFirst.js",
+        "src/reduce.js",
+        "src/slice.js"
     ]
   }
 }

@@ -8,18 +8,24 @@ const sample_0 = [
   { 'scottsman': 'McDuck', 'true_scottsman': false }
 ]
 
-const expected_0 = [
+const expected_true = [
   { 'scottsman': 'McKinley', 'true_scottsman': true },
   { 'scottsman': 'McAlister', 'true_scottsman': true }
 ]
 
+const expected_false = [
+  { 'scottsman': 'Mickey', 'true_scottsman': false },
+  { 'scottsman': 'McDuck', 'true_scottsman': false }
+]
 
-const debugtext = filter(sample_0, ({true_scottsman}) => true_scottsman );
-console.log(debugtext);
-
-
-describe("Filter true scottsmen", () => {
-  it("scottsmen", () => {
-    expect(filter(sample_0, ({true_scottsman}) => true_scottsman )).to.deep.equal(expected_0)
+describe("Filter", () => {
+  it("true scottsmen", () => {
+    expect(filter(sample_0, ({true_scottsman}) => true_scottsman )).to.deep.equal(expected_true)
+  });
+  it("not true scottsmen", () => {
+    expect(filter(sample_0, ({true_scottsman}) => !true_scottsman )).to.deep.equal(expected_false)
+  });
+  it("not no match", () => {
+    expect(filter(expected_false, ({true_scottsman}) => true_scottsman )).to.deep.equal( [[]] )
   });
 })

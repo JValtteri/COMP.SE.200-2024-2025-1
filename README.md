@@ -1,3 +1,5 @@
+[![Mocha Tests](https://github.com/JValtteri/COMP.SE.200-2024-2025-1/actions/workflows/mocha_tests.yml/badge.svg)](https://github.com/JValtteri/COMP.SE.200-2024-2025-1/actions/workflows/mocha_tests.yml)
+
 # Student template
 
 ## Purpose of this repository

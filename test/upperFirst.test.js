@@ -6,6 +6,12 @@ describe("upperFirst", () => {
       expect(upperFirst("word")).to.equal("Word")
     });
     it("Single capitalized letter stays capitalized", () =>{
-      expect("F").to.equal("F")
+      expect(upperFirst("F")).to.equal("F")
     });
+    it("Empty input should return empty", () => {
+      expect(upperFirst("")).to.equal("")
+    });
+    it("Wrong input type should throw an error", () => {
+      expect(upperFirst(1)).to.throw(TypeError)
+    })
   })

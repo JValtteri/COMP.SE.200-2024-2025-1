@@ -19,5 +19,5 @@ describe("toInteger", () => {
     });
     it("Negative string float -235.7 to rounded negative integer -236", () =>{
         expect(toInteger("-235.7")).to.equal(-236)
-      });
-  })
+    });
+})

@@ -12,4 +12,7 @@ describe("Get", () => {
   it("Get invalid path", () =>{
     expect( get(test_input, 'cat', 'spam') ).to.equal('spam')
   });
+  it("Null object", () =>{
+    expect( get(null, 'cat', 'nil') ).to.equal('nil')
+  });
 })

@@ -1,4 +1,5 @@
 [![Mocha Tests](https://github.com/JValtteri/COMP.SE.200-2024-2025-1/actions/workflows/mocha_tests.yml/badge.svg)](https://github.com/JValtteri/COMP.SE.200-2024-2025-1/actions/workflows/mocha_tests.yml)
+[![Coverage Status](https://coveralls.io/repos/github/JValtteri/COMP.SE.200-2024-2025-1/badge.svg)](https://coveralls.io/github/JValtteri/COMP.SE.200-2024-2025-1)
 
 # Student template
 

@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: '${{ matrix.node }}'
       - uses: actions/checkout@v2
+
       - name: 'Cache node_modules'
         uses: actions/cache@v2
         with:
@@ -27,7 +28,15 @@ jobs:
           key: ${{ runner.os }}-node-v${{ matrix.node }}-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
+
       - name: Install Dependencies
         run: npm install
+
       - name: Run All Node.js Tests
         run: npm run test
+
+      - name: Run Node.js Coverage
+        run: npm run coverage
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2

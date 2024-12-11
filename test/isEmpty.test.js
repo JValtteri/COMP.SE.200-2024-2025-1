@@ -6,8 +6,6 @@ const test_path_1 = 'City.Street.House.Pets[1]'
 
 const func = isEmpty;
 
-//const proto = {}
-
 describe("Is empty", () => {
   it("null value", () =>{
     expect(isEmpty(null)).to.equal(true)
@@ -24,15 +22,9 @@ describe("Is empty", () => {
   it("Non-empty map", () =>{
     expect(isEmpty( {'foo': 'bar'} )).to.equal(false)
   });
-//  it("Empty map", () =>{
-//    expect(isEmpty( {'foo': [] } )).to.equal(false)
-//  });
   it("Function is empty", () =>{
     expect(isEmpty( func )).to.equal(true)
   });
-//  it("Protorype", () =>{
-//    expect(isEmpty( Object.create(proto) )).to.equal(true)
-//  });
   it("Set", () =>{
     expect(isEmpty( new Set(['a', 'b', 'c']) )).to.equal(false)
   });

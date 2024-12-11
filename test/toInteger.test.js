@@ -15,11 +15,9 @@ describe("toInteger", () => {
     it("Negative string -14 to integer -14", () =>{
         expect(toInteger("-14")).to.equal(-14)
       });
-    /*
-    it("Trying to make a word an integer should throw an error", () => {
+    it.skip("Trying to make a word an integer should throw an error", () => {
         expect(function () {toInteger("word")} ).to.throw(TypeError)
     });
-    */
     it("Negative string float -235.7 to rounded negative integer -235", () =>{
         expect(toInteger("-235.7")).to.equal(-235)
     });
